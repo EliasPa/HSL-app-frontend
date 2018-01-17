@@ -3,6 +3,7 @@
     <div class="mdl-grid">
       <div class="mdl-layout-spacer"></div>
       <form-component ref="form" :set="(data) => setLocations(data)"></form-component>
+      <div class="mdl-layout-spacer"></div>
       <time-table ref="table"></time-table>
       <div class="mdl-layout-spacer"></div>
     </div>
