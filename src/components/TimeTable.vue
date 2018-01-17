@@ -4,8 +4,8 @@
             <thead>
                 <tr>
                     <th>Bus</th>
-                    <th>From</th>
-                    <th>To</th>
+                    <th>Leaves</th>
+                    <th>Arrives</th>
                     <th>Time until there</th>
                     <th>Walk distance</th>
                 </tr>
@@ -57,7 +57,6 @@
                         if (response.data.status == 200) {
                             this.busData = [];
                             let data = response.data;
-                            console.log(data);
                             vue.busData.push(data);
                             vue.loading = false;
                         }

@@ -62,10 +62,12 @@
                         if (response.data.status == 200) {
                             let data = response.data;
                             vue.set(data);
+                        } else {
+                            this.start = '';
+                            this.end = '';
                         }
                         this.showSnackBarMessage({message: response.data.message})
                         this.loading = false;
-
                     })
                     .catch(error => {
                         console.log(error);
