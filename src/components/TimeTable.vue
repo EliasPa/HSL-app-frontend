@@ -29,7 +29,7 @@
 <script>
     import axios from "axios";
     import './../assets/main.css'
-
+    import global from '../global.js'
     export default {
         name: "table-component",
         data() {
@@ -50,7 +50,7 @@
             getTimes: function (data) {
                 this.loading = true;
                 let vue = this;
-                let url = "http://localhost:3001/data";
+                let url = global.url + "/data";
                 axios
                     .post(url, data)
                     .then(response => {

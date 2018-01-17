@@ -33,6 +33,8 @@
 <script>
     import axios from "axios";
     import './../assets/main.css'
+    import global from '../global.js'
+
     export default {
         name: "Form",
         data() {
@@ -51,7 +53,7 @@
             setLocations: function () {
                 this.loading = true
                 let vue = this;
-                let url = "http://localhost:3001/set";
+                let url = global.url + "/set";
                 let stops = {
                     start: vue.start,
                     end: vue.end
