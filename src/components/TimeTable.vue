@@ -23,6 +23,10 @@
         <div class="spinner">
             <simple-spinner size="small" v-if="loading"></simple-spinner>
         </div>
+        <div ref="snackBar" class="mdl-js-snackbar mdl-snackbar">
+            <div class="mdl-snackbar__text"></div>
+            <button class="mdl-snackbar__action" type="button"></button>
+        </div>
     </div>
 </template>
 
@@ -51,19 +55,20 @@
                 this.loading = true;
                 let vue = this;
                 let url = global.url + "/data";
-                axios
-                    .post(url, data)
-                    .then(response => {
-                        if (response.data.status == 200) {
-                            this.busData = [];
-                            let data = response.data;
-                            vue.busData.push(data);
-                            vue.loading = false;
-                        }
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    });
+                axios.post(url, data).then((response) => {
+                    if (response.data.status == 200) {
+                        this.busData = [];
+                        let data = response.data;
+                        vue.busData.push(data);
+                        vue.loading = false;
+                    }
+                }).catch((error) => {
+                    this.showSnackbarMessage({message: 'An error occured.'})
+                });
+            },
+            showSnackbarMessage: function (data) {
+                let snackbar = this.$refs.snack
+                snackbar.MaterialSnackbar.showSnackbar(data)
             },
             setPeriodical: function (data) {
                 let vue = this;

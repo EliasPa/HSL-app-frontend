@@ -72,7 +72,7 @@
                         this.loading = false;
                     })
                     .catch(error => {
-                        console.log(error);
+                        this.showSnackBarMessage({message: 'An error occured.'})
                     });
             }
         },
