@@ -1,7 +1,9 @@
 # Simple HSL API demo
+An app that's used for querying bus data in the Helsinki metropolitan area (HSL).
+Please note: This application will not work with legs containing multiple buses, this app was designed simply for me to check my regular bus as easily as possible.
+However, you can test this application here: https://simple-bus-app.herokuapp.com/ . But please make sure you use the actual stop names.
 
-> App for querying bus data.
-
+Currently WIP.
 ## Build Setup
 
 ``` bash
@@ -14,8 +16,6 @@ npm run dev
 # build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# build for production
+npm run build
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
