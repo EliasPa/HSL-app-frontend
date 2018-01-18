@@ -1,4 +1,4 @@
-# hsl-app
+# Simple HSL API demo
 
 > App for querying bus data.
 
